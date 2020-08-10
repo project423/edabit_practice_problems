@@ -687,3 +687,226 @@
     
 # print(is_avg_whole([3, 9]))
 
+#67
+# Create a function which takes in a list of numbers and a number to find. Return the sum of every index in the list which matches the chosen number.
+# sum_found_indexes([0, 3, 3, 0, 0, 3], 3) ➞ 8
+
+# def sum_found_indexes(lst, n):
+#     return sum(i for i, ltr in enumerate(lst) if ltr == n)
+
+    # def find(str, ch):
+    #     for i, ltr in enumerate(str):
+    #     if ltr == ch:
+    #         yield i
+
+# def sum_found_indexes(lst, n):
+#     found_indexes = []
+#     for i, ltr in enumerate(lst):
+#         if ltr == n:
+#             found_indexes.append(i)
+#     return sum(found_indexes)
+            
+    
+
+
+# print(sum_found_indexes([0, 3, 3, 0, 0, 3], 3))
+
+# Write a function that takes a positive integer and return its factorial.
+# factorial(4) ➞ 24
+
+#68
+# def factorial(Z):
+#     if Z == 0:
+#         return 1
+#     elif Z == 1:
+#         return Z
+#     else:
+#         return Z * factorial(Z-1)        
+    
+    
+    
+# print(factorial(5))
+
+#69
+# destructuring a list 
+# first, b, c, d, f, last = [1, 2, 3, 4, 5, 6]
+# middle = [b,c,d,f]
+# first, *middle, last = [1, 2, 3, 4, 5, 6]
+
+#70
+# Radian to Degree
+
+# import math
+
+# def to_degree(radian):
+#     return radian * (180 / math.pi)
+
+#70
+
+# Volume of a Cone
+# cone_volume(3, 2) ➞ 12.57
+
+# from math import pi
+
+# def cone_volume(h, r):
+#     return round((1/3)*pi * (r**2) * h, 2)
+
+# print(cone_volume(3, 2))
+
+#71
+#fixed broken code
+# def grade_percentage(user_score, pass_score):
+#     s = ''
+#     if user_score[:-1] < pass_score[:-1]:
+#         s = 'FAILED'
+#     else:
+#         s = 'PASSED'
+#     return 'You ' + s +' the Exam'
+# print(grade_percentage("85%", "85%"))
+
+#72
+# integer_boolean("100101") ➞ [True, False, False, True, False, True]
+
+# def integer_boolean(n):
+#     return [bool(int(num)) for num in n]
+
+# print(integer_boolean('100101'))
+
+#73
+
+# Create a function that returns true if a given inequality expression is correct and false otherwise.
+# correct_signs("3 < 7 < 11") ➞ True
+
+# def correct_signs(txt):
+#     # return eval(txt) obvious easy answer
+#     # try to complete without eval
+#     lst = txt.split('<')
+#     print(lst[0],lst[1],lst[2])
+#     return int(lst[0]) < int(lst[1]) <int (lst[2]) 
+    
+
+
+# print(correct_signs("3 < 7 < 11"))
+
+# Recursion: Sum
+# Write a function that finds the sum of the first n natural numbers. Make your function recursive.
+# sum_numbers(5) ➞ 15
+# 1 + 2 + 3 + 4 + 5 = 15
+
+# def sum_numbers(n):
+#     return n if n == 0 else n + sum_numbers(n - 1)
+#     # if n == 0:
+#     #     return n
+#     # else:
+#     #     return n + (sum_numbers(n-1))
+    
+# print(sum_numbers(100))
+
+#74
+# def triangle(n):
+#     return int((n * (n + 1)) / 2)
+    
+# print(triangle(3))
+
+# add_indexes([0, 0, 0, 0, 0]) ➞ [0, 1, 2, 3, 4]
+
+#75
+
+# def add_indexes(lst):
+#     # total = []
+#     # for i,v in enumerate(lst):
+#     #     total.append(i+v)
+#     # return total
+#     return [i+v for i,v in enumerate(lst)]
+# print(add_indexes([1, 2, 3, 4, 5]))
+
+#76
+# Recursion: Length of a String
+# length("apple") ➞ 5
+
+# def length(txt):
+#     # if txt == '':
+#     #     return 0
+#     # else:
+#     #     return 1 + length(txt[1:])
+    # return 0 if txt == '' else 1 + length(txt[1:])
+    
+
+# print(length('shipment'))
+
+#77
+# setify([1, 3, 3, 5, 5]) ➞ [1, 3, 5]
+
+# def setify(lst):
+#     return sorted(list(set(lst)))
+
+# print(setify([5,9,9]))
+
+#78
+# count_characters([
+#   "22222222",
+#   "22222222",
+# ]) ➞ 16
+
+# def count_characters(lst):
+#    return len(lst)
+    
+# print(count_characters([
+# '###',
+# '###',
+# '###'
+# ]))
+
+#78
+# count_vowels("Celebration") ➞ 5
+
+# def count_vowels(txt):
+#     return len([c for c in txt.lower() if c in 'aeiou'])
+
+
+# print(count_vowels("Celebration"))
+
+#79
+# def factorial(n):
+#     return n if n == 1 else n * factorial(n-1)
+
+
+# print(factorial(5))
+
+#80
+# mapping(["p", "s"]) ➞ { "p": "P", "s": "S" }
+
+
+# def mapping(letters):
+#     return {i.lower() : i.upper() for i in letters}
+    
+# print(mapping(["p", "s"]))
+
+#81
+
+# index_multiplier([1, 2, 3, 4, 5]) ➞ 40
+
+# def index_multiplier(lst):
+#     return sum(i * v for i,v in enumerate(lst))
+    
+    
+# print(index_multiplier([9, 3, 7, -7]))
+
+#82
+# name_shuffle("Donald Trump") ➞ "Trump Donald"
+
+# def name_shuffle(txt):
+#     a, b = txt.split(' ')
+#     return '{} {}'.format(b,a)
+
+# print(name_shuffle("Donald Trump"))
+
+#83
+# (counterpartCharCode('a'), 65)
+# def counterpartCharCode(char):
+#     if char.islower():
+#         return ord(char.upper())
+#     return ord(char.lower())
+
+# print(counterpartCharCode(''))
+    
