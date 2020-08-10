@@ -340,8 +340,350 @@
 # # print(has_hidden_fee(["$31", "$30", "$21", "$12", "$10", "$38", "$42", "$27", "$51"], "$297"))
 
 #37
-def to_array(txt):
-    return txt.split(', ') if txt else []
+# def to_array(txt):
+#     return txt.split(', ') if txt else []
     
-print(to_array("watermelon, raspberry, orange"))
-print(to_array("x1, x2, x3, x4, x5"))
+# print(to_array("watermelon, raspberry, orange"))
+# print(to_array("x1, x2, x3, x4, x5"))
+
+#38
+# def get_filename(path):
+#     return path.split('/')[-1]
+    
+# print(get_filename("C:/Projects/pil_tests/ascii/edabit.txt"))
+
+#39
+
+# def middle_earth(lst):
+#     return abs(lst.index('Frodo')-lst.index('Sam')) == 1
+    
+    
+# print(middle_earth(['Sam', 'Frodo', 'Gandalf']))
+
+#40
+# quarters, dimes, nickels, pennies.
+# def change_enough(change, amount_due):
+#     # total = change[0]*.25
+#     # total += change[1]*.10
+#     # total += change[2]*.5
+#     # total +=change[3]*.01
+
+# 	return sum([a*b for a, b in zip(change, values)]) >= amount_due
+ 
+ 
+#41   
+# Create a function that returns the total number of parameters passed in.
+# number_args("a", "b", "c") ➞ 3
+
+# def number_args(*args):
+#     return len(args)
+
+
+# print(number_args("a", "b", "c"))
+
+#42 
+# Write a function that stutters a word as if someone is struggling to read it. The first two letters are 
+# repeated twice with an ellipsis ... 
+# and space after each, and then the word is pronounced with a question mark ?.
+# stutter("incredible") ➞ "in... in... incredible?"
+
+# def stutter(word):
+#     without f strings
+#     return '{0}... {0}... {1}?'.format(word[:2], word)
+#     return '{}... {}... {}?'.format(word[:2],word[:2],word)
+    
+# print(stutter('incredible'))
+
+#43
+# check_factors([2, 3, 4], 12) ➞ True
+# Since 2, 3, and 4 are all factors of 12.
+
+# check_factors([2, 3, 4], 12) ➞ True 
+# def check_factors(factors, num):
+#     return all(num % n == 0 for n in factors)
+
+# print(check_factors([1,2, 3, 4], 12))
+
+#44
+# MultiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]
+# def MultiplyByLength(arr):
+#     return [n * len(arr) for n in arr]
+#     # with map
+#     return list (map(lambda x: x*len(arr), arr))
+
+# print(MultiplyByLength([0]))
+
+#45
+
+# def is_valid(zip_code):
+#     return zip_code.isdigit() and len(zip_code) == 5
+    
+    
+# print(is_valid("853476"))
+
+#45
+# exists_higher([5, 3, 15, 22, 4], 10) ➞ True
+# def exists_higher(lst, n):
+#     return any(num >= n for num in lst)
+#     # return max(lst) >= n if lst else False
+    
+# print(exists_higher([5, 3, 2, 4], 10))
+
+#46
+# def md_format(word, style):
+#     # if style == 'b':
+#     #     return '**{}**'.format(word)
+#     # elif style == 'i':
+#     #     return '_{}_'.format(word)
+#     # elif style == 'c':
+#     #     return '`{}`'.format(word)
+#     # elif style == 's':
+#     #     return '~~{}~~'.format(word)
+#     markdown = {'b':'**', 'i':'_', 'c':'`', 's':'~~'}
+#     return '{0}{1}{0}'.format(markdown[style], word)
+
+# 47
+# from math import pi
+# def my_pi(n):
+#     return 3 if n == 0 else round(pi,n)
+    
+
+# print(my_pi(3))
+
+#48
+# def get_extension(lst):
+#     # return [i[-1] for i in [v.split('.') for v in lst]]
+#     return [i.split(".")[1] for i in lst]
+    
+# print(get_extension(["project1.jpg", "project1.pdf", "project1.mp3"]))
+
+#49
+# remove_none(["a", None, "b", None]) ➞ ["a", "b"]
+
+# def remove_none(lst):
+#     return [v for v in lst if v != None]
+    
+    
+# print(remove_none(['a', None, 'b', None]))
+
+#50
+# even_odd_partition([5, 8, 9, 2, 0]) ➞ [[8, 2, 0], [5, 9]]
+
+# def even_odd_partition(lst):
+#    return [[n for n in lst if n % 2 == 0],[n for n in lst if n % 2 != 0]]
+# #    return [[i for i in lst if not i%2], [i for i in lst if i%2]]
+   
+
+# print(even_odd_partition([5, 8, 9, 2, 0]))
+
+
+#51
+# filter_unique(["abb", "abc", "abcdb", "aea", "bbb"]) ➞ ["abc"]
+# def filter_unique(lst):
+#     # return list(filter(lambda l: len(l) == len(set(l)), lst))
+#     return [i for i in lst if(len(set(list(i)))) == len(i)]
+    
+
+# print(filter_unique(["abb", "abc", "abcdb", "aea", "bbb"])) 
+
+#52
+# dictionary("bu", ["button", "breakfast", "border"]) ➞ ["button"]
+# def dictionary(initial, words):
+#     # return [w for w in words if w.startswith(initial)]
+#     return list(filter(lambda w: w.startswith(initial), words))
+    
+    
+# print(dictionary('bu', ['button', 'breakfast', 'border']))
+
+#53
+# repeat("mice", 5) ➞ "mmmmmiiiiiccccceeeee"
+# def repeat(txt, n):
+#     return ''.join([l*n for l in txt])
+    
+    
+# print(repeat("hello", 3)) 
+
+# 54
+# mirror([0, 2, 4, 6]) ➞ [0, 2, 4, 6, 4, 2, 0]
+
+# def mirror(lst):
+#     return lst + lst[:-1][::-1]
+
+# print(mirror([0, 2, 4, 6]))
+
+#55
+# can_capture(["A8", "E8"]) ➞ True
+# def can_capture(rooks):
+#     A, B = rooks
+#     return A[0] == B[0] or A[1] == B[1]
+    # return  rooks[0][0] == rooks[1][0] or rooks[0][1] == rooks[1][1]
+    
+    
+# print(can_capture(["A8", "A7"]))
+
+#56
+# after_n_years({
+#   "Joel" : 32,
+#   "Fred" : 44,
+#   "Reginald" : 65,
+#   "Susan" : 33,
+#   "Julian" : 13
+# }, 1) ➞ {
+#   "Joel" : 33,
+#   "Fred" : 45,
+#   "Reginald" : 66,
+#   "Susan" : 34,
+#   "Julian" : 14
+# }
+# def after_n_years(names, n):
+#     return {k:v+abs(n) for k,v in names.items()}
+
+# print(after_n_years({
+#   "Joel" : 32,
+#   "Fred" : 44,
+#   "Reginald" : 65,
+#   "Susan" : 33,
+#   "Julian" : 13
+# }, 1))
+
+#57 Create a function that goes through the array, incrementing (+1) for each odd number and decrementing (-1) for each even number.
+# transform([1, 2, 3, 4, 5]) ➞ [2, 1, 4, 3, 6]
+
+
+# def transform(lst):
+#     return [n - 1 if n % 2 == 0 else n + 1 for n in lst ]    
+    
+# print(transform([1, 2, 3, 4, 5]))
+
+#58
+# FIZZ BUZZ
+# fizz_buzz(3) ➞ "Fizz"
+
+# fizz_buzz(5) ➞ "Buzz"
+
+# fizz_buzz(15) ➞ "FizzBuzz"
+# def fizz_buzz(num):
+#     if num % 3 == 0 and num % 5 == 0:
+#         return 'FizzBuzz'
+#     elif num % 3 == 0:
+#         return 'Fizz'
+#     elif num % 5 == 0:
+#         return 'Buzz'
+#     else:
+#         return str(num)
+# def fizz_buzz(num):
+#     return "Fizz" * (num % 3 == 0) + "Buzz"*(num % 5==0) or str(num)
+    
+    
+# print('Hi'*True)
+
+#59
+# Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+
+# largest_swap(27) ➞ False
+
+# def largest_swap(num):
+#     if num == int(''.join([i for i in str(num)][::-1])):
+#         return True
+#     return True if num > int(''.join([i for i in str(num)][::-1])) else False
+#     return num >= int(str(num)[::-1])
+    
+    
+# print(largest_swap(99))
+
+#60
+# accept_into_movie(14, True) ➞ True
+
+# def accept_into_movie(age, is_supervised):
+#     return age >= 15 or is_supervised
+
+# print(accept_into_movie(14, True))
+
+
+# sub_reddit("https://www.reddit.com/r/funny/") ➞ "funny"
+# def sub_reddit(link):
+#     return link.split('/')[-2]
+    
+    
+    
+# print(sub_reddit("https://www.reddit.com/r/relationships/"))
+
+
+#61
+# Create a function to count the number of 1s in a 2D list.
+
+# def count_ones(matrix):
+#     # flat_list = []
+#     # for sublist in matrix:
+#     #     for i in sublist:
+#     #         flat_list.append(i)
+#     # return flat_list
+#     return [i for sublist in matrix for  i in sublist]
+#     # return sum(x.count(1) for x in matrix)    
+
+# print(count_ones([[1, 0],[0, 0]]))
+
+
+#62
+# A value is omnipresent if it exists in every sublist inside the main list.
+# is_omnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 1) ➞ True
+
+# def is_omnipresent(lst, val):
+#     return all(val in sublist for sublist in lst)
+
+# print(is_omnipresent([[1, 1], [1, 3], [5, 1], [7, 1]], 1))
+
+#63
+# def is_prefix(word, prefix):
+#     return word.startswith(prefix.strip('-'))
+    
+# print(is_prefix("mation", "auto-"))
+    	
+# def is_suffix(word, suffix):
+#     return word.endswith(suffix.strip('-'))
+
+# print(is_suffix("rhinoplasty", "-plasty"))
+
+
+#63
+# Write a function that takes all even-indexed characters and odd-indexed characters from a string and concatenates them together.
+# index_shuffle("abcd") ➞ "acbd"
+# // "ac" (even-indexed) + "bd" (odd-indexed)
+
+# def index_shuffle(txt):
+#     return txt[::2] + txt[1::2]
+    
+    
+    
+# print(index_shuffle("abcd"))
+
+#64
+# Create a function which takes in a sentence txt and a string of characters chars and return the sentence but with all the specified characters removed.
+# strip_sentence("the quick brown fox jumps over the lazy dog", "aeiou") ➞ "th qck brwn fx jmps vr th lzy dg"
+# def strip_sentence(txt, chars):
+#     return ''.join([letter for letter in txt if letter not in chars])
+
+# print(strip_sentence("the quick brown fox jumps over the lazy dog", "aeiou"))
+
+# get_abs_sum([2, -1, 4, 8, 10]) ➞ 25
+
+#65
+
+# get_abs_sum([2, -1, 4, 8, 10]) ➞ 25
+
+# def get_abs_sum(lst):
+#     return sum(abs(n) for n in lst)
+    
+
+
+# print(get_abs_sum([2, -1, 4, 8, 10]))
+
+#66
+# Is the Average of All Elements a Whole Number?
+# is_avg_whole([1, 3]) ➞ True
+
+# def is_avg_whole(arr):
+#     return (sum(arr)/len(arr)).is_integer()
+    
+# print(is_avg_whole([3, 9]))
+
