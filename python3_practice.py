@@ -910,3 +910,205 @@
 
 # print(counterpartCharCode(''))
     
+    
+#84
+# reverse(True) ➞ False
+# def reverse(arg):
+#     if type(arg) == bool:
+#         return not arg
+#     return 'boolean expected'
+
+# print(reverse(False))
+
+#85
+# Filter out Strings from an Array
+# filter_list([1, 2, "a", "b"]) ➞ [1, 2]
+
+# def filter_list(lst):
+#     # list comprehension
+#     return [i for i in lst if type(i) == int]
+#     # filter
+#     # return list(filter(lambda x: type(x) == int, lst))
+
+# print(filter_list([1, 2, "a", "b"]))
+
+# Even Number Generator
+# Using list comprehensions, create a function that finds all even numbers from 1 to the given number.
+
+#86
+
+# find_even_nums(8) ➞ [2, 4, 6, 8]
+# def find_even_nums(num):
+#     # return [i for i in range(1,num+1) if i % 2 == 0]
+#     return [ x for x in range(2,num+1,2)]
+    
+    
+
+# print(find_even_nums(8))
+
+#87
+# alphanumeric_restriction("Bold") ➞ True
+
+# def alphanumeric_restriction(s):
+#     return s.isalpha() or s.isdigit()
+    
+# print(alphanumeric_restriction("5554"))
+
+#88
+# Count Ones in Binary Representation of Integer
+
+# def count_ones(n):
+#     return bin(n).count('1')
+
+# print(count_ones(12))
+
+#89
+
+# def XO(txt):
+#     return txt.lower().count('o') == txt.lower().count('x')
+    
+# print(XO("Ooxx"))
+
+#90
+# Repeating Letters
+# def double_char(txt):
+#     return ''.join([l * 2 for l in txt])
+    
+# print(double_char("String")) 
+
+#90
+# import datetime
+
+# def time_for_milk_and_cookies(date):
+#     return date.month == 12 and date.day == 24
+
+
+# print(time_for_milk_and_cookies(datetime.date(2013, 12, 24)))
+
+#91
+# Four Passengers and a Driver
+# from math import ceil
+
+# def cars_needed(n):
+#     # return n // 5
+#     return (n + 4) // 5
+
+# print(cars_needed(12))
+
+#92
+# (alphabet_soup("hello"), "ehllo")
+# def alphabet_soup(txt):
+#     return ''.join(sorted(txt))
+    
+    
+# print(alphabet_soup("hello"))
+
+#93
+# unique_sort([1, 2, 4, 3]) ➞ [1, 2, 3, 4]
+# def unique_sort(lst):
+#     return sorted(set(lst))
+
+# print(unique_sort([1, 2, 4, 3]))
+
+#94
+# Find the Odd Integer
+# find_odd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]) ➞ -1
+# def find_odd(lst):
+#     lst1 = []
+#     for num in lst:
+#         if lst.count(num) % 2 != 0:
+#             lst1.append(num)
+#     return lst1[0]
+
+# def find_odd(lst):
+#       for num in lst:
+#     if lst.count(num) % 2:
+#       return num
+    
+
+    
+    
+    
+# print(find_odd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])) #-> 5
+
+#95
+# next_in_line([5, 6, 7, 8, 9], 1) ➞ [6, 7, 8, 9, 1]
+# Stand in Line
+
+# def next_in_line(lst, num):
+#     if lst:
+#         lst.pop(0)
+#         lst.append(num)
+#         return lst
+#     else:
+#         return 'No list has been selected'
+    
+# print(next_in_line([5, 6, 7, 8, 9], 1))
+
+#96
+# replace_vowels("the aardvark", "#") ➞ "th# ##rdv#rk"
+
+# def replace_vowels(txt, ch):
+#     # new_list = []
+#     # for letter in txt:
+#     #     if letter in 'aeiou':
+#     #         new_list.append(ch)
+#     #     else:
+#     #         new_list.append(letter)
+#     # return ''.join(new_list)
+#     return ''.join([i if i not in 'aeoui' else ch for i in txt])
+
+
+# print(replace_vowels("the aardvark", "#"))
+#97
+
+# def tuck_in(lst1, lst2):
+#     for i,v in enumerate(lst2):
+#         lst1.insert(i+1,v)
+#     return lst1
+#     # return [lst1.insert((i+1,v)) for i,v in enumerate(lst2)]
+    
+    
+    
+# print(tuck_in([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]))
+    
+# tuck_in([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]) ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#98
+# sort_by_length(["Google", "Apple", "Microsoft"])➞ ["Apple", "Google", "Microsoft"]
+# def sort_by_length(lst):
+#     return sorted(lst, key=len)
+    
+    
+    
+# print(sort_by_length(["Google", "Apple", "Microsoft"]))
+
+#99
+# simon_says([1, 2], [5, 1]) ➞ True
+
+# def simon_says(lst1, lst2):
+#     return lst1[:-1] == lst2[1:] 
+    
+    
+    
+# # print(simon_says([1, 2], [5, 1]))
+# print(simon_says([1, 2,3, 4, 5], [0,1,2,3,4]))
+
+#100
+# list_operation(1, 10, 3) ➞ [3, 6, 9]
+# list_operation(10, 50, 10), [10, 20, 30, 40, 50])
+
+# def list_operation(x, y, n):
+#     return [i for i in range(x,y+1) if i % n == 0]
+    
+
+# # print(list_operation(1, 10, 3))
+# print(list_operation(10,50,10))
+
+#100
+# profit_margin(28, 39) ➞ "28.2%"
+# def profit_margin(cost_price, sales_price):
+#     return '{}%'.format(round(((sales_price - cost_price)/sales_price) * 100, 1)) 
+
+# print(profit_margin(10, 15))
+
