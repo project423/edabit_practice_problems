@@ -1112,3 +1112,240 @@
 
 # print(profit_margin(10, 15))
 
+
+# remove_smallest([1, 2, 3, 4, 5] ) ➞ [2, 3, 4, 5]
+# remove_smallest([1, 2, 3, 4, 5])
+
+#101
+# def remove_smallest(lst):
+#     if lst:
+#         lst.remove(min(lst))
+#         return lst
+#     return []
+#     # if lst:
+#     #   	lst.remove(min(lst))
+#     # return lst
+    
+    
+# print(remove_smallest([]))
+
+# 102
+# # " A  glittering  gem     is    not   enough.  "
+# def correct_spacing(sentence):
+#     return ' '.join(sentence.split())
+    
+# print(correct_spacing(" A  glittering  gem     is    not   enough.  "))
+
+#103
+# is_in_order("abc") ➞ True
+
+# def is_in_order(txt):
+#     return list(txt) == sorted(txt)
+    
+# print(is_in_order("ab") )
+
+#104
+
+# A Circle and Two Squares
+
+# square_areas_difference(5) ➞ 50
+
+# def square_areas_difference(r):
+#     return 2 * (r**2)
+    
+    
+# print(square_areas_difference(5))
+
+#105
+
+# nth_smallest([1, 3, 5, 7], 1)
+# nth_smallest([1, 3, 5, 7], 1) ➞ 1
+# nth_smallest([7, 3, 5, 1], 2) ➞ 3
+# nth_smallest([5, 4, 3, 2, 1, -3], 5), 4)
+
+# def nth_smallest(lst, n):
+#     # if n > len(lst):
+#     #     return None
+#     # return sorted(lst)[n-1]
+#     return None if n > len(lst) else sorted(lst)[n-1]
+    
+# # print(nth_smallest([4,5], 1))
+# print(nth_smallest([5, 4, 3, 2, 1, -3], 1))
+
+#106
+
+# sort_by_length(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+
+# def sort_by_length(lst):
+#     return sorted(lst, key=len)
+    
+# print(sort_by_length(["a", "ccc", "dddd", "bb"]))
+
+#107
+
+# card_hide("1234123456785678") ➞ "************5678"
+
+
+# def card_hide(card):
+#     return len(card[:-4])* '*' + card[-4:] 
+    
+# print(card_hide("1234123456785678"))
+
+
+#108
+
+# society_name(["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
+
+# def society_name(friends):
+#     return ''.join(sorted([f[0] for f in friends]))
+
+# print(society_name(["Adam", "Sarah", "Malcolm"]))
+
+#109
+
+# filter_list([1, 2, 3, "a", "b", 4]) ➞ [1, 2, 3, 4]
+
+# def filter_list(l):
+#     return [i for i in l if type(i) == int]
+    
+
+
+# print(filter_list([1, 2, 3, "a", "b", 4]))
+
+#110
+# left_digit("TrAdE2W1n95!") ➞ 2
+
+# def left_digit(num):
+#     # return int(list(filter(lambda x: x.isdigit(), num))[0])
+#     return [int(n) for n in num if n.isdigit()][0]    
+    
+# print(left_digit("TrAdE2W1n95!"))
+
+
+#111
+# Supposed to write more minimalistic
+# def are_true(a, b):
+#     if a and b:
+#         return "both"
+#     elif a:
+#         return 'first'
+#     elif b:
+#         return 'second'
+#     else:
+#         return 'neither' 
+
+# # return 'both' if a and b else 'first' if a else 'second' if b else 'neither'
+# print(are_true(True, True))
+# print(are_true(True, False))
+# print(are_true(False, True))
+# print(are_true(False, False))
+
+#112
+# Hamming distance is the number of characters that differ between two strings.
+# hamming_distance("abcde", "bcdef") ➞ 5
+
+# def hamming_distance(txt1, txt2):
+#     count = 0
+#     for first , second in zip(txt1,txt2):
+#         if first != second:
+#             count += 1
+#     return count
+            
+# def hamming_distance(txt1, txt2):
+#     return sum(x!=y for (x,y) in zip(txt1,txt2))  
+    
+# print(hamming_distance("a", "a"))
+
+
+#113
+# is_subset([3, 2, 5], [5, 3, 7, 9, 2]) ➞ True
+# def is_subset(lst1, lst2):
+#     return set(lst1).issubset(lst2)
+    
+# print(is_subset([1, 2], [3, 5, 9, 1]))
+
+#114
+# reverse("Hello World") ➞ "DLROw OLLEh"
+# def reverse(txt):
+#     return txt.swapcase()[::-1]
+
+
+# print(reverse("Hello World"))
+
+#115
+# get_student_names({
+#   "Student 1" : "Steve",
+#   "Student 2" : "Becky",
+#   "Student 3" : "John"
+# }) ➞ ["Becky", "John", "Steve"]
+
+
+# def get_student_names(students):
+#     return sorted(s for s in students.values())
+#     return sorted(students.values())
+
+# print(get_student_names({
+# 	"Student 1":"Steve",
+# 	"Student 2":"Becky",
+# 	"Student 3":"John"
+# }))
+
+#116
+# compound_interest(10000, 10, 0.06, 12) ➞ 18193.97
+# def compound_interest(p, t, r, n):
+#     exponent = n * t
+#     middle = (1 + (r/n))
+#     middle_times_exponent = middle**exponent
+#     return round(p * middle_times_exponent ,2)
+
+# print(compound_interest(3500, 15, 0.1, 4))
+
+#117
+# evenly_divisible(1, 10, 20) ➞ 0
+# def evenly_divisible(a, b, c):
+#     return sum(i for i in range(a,b+1) if not i % c )
+
+# print(evenly_divisible(1, 10, 2))
+
+#118
+
+# index_of_caps("eDaBiT") ➞ [1, 3, 5]
+# def index_of_caps(word):
+#     return [i  for i, l in enumerate(word) if l.isupper()] 
+
+# print(index_of_caps("eDaBiT"))
+# print(index_of_caps("@xCE#8S#i*$en"))
+
+#119
+# Encode Morse
+# encode_morse("EDABBIT CHALLENGE") ➞ ". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."
+
+
+# def encode_morse(message):
+#     d = {
+#   'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
+#   'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..',
+#   'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
+#   'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
+#   'Y': '-.--', 'Z': '--..', ' ': ' ', '0': '-----',
+#   '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....',
+#   '6': '-....', '7': '--...', '8': '---..', '9': '----.',
+#   '&': '.-...', "'": '.----.', '@': '.--.-.', ')': '-.--.-', '(': '-.--.',
+#   ':': '---...', ',': '--..--', '=': '-...-', '!': '-.-.--', '.': '.-.-.-',
+#   '-': '-....-', '+': '.-.-.', '"': '.-..-.', '?': '..--..', '/': '-..-.'
+# }
+#     # return ' '.join(char_to_dots[l.upper()] for l in message)
+#     return ' '.join(d[i] for i in message.upper())
+
+# print(encode_morse("EDABBIT CHALLENGE"))
+
+# Check for Anagrams
+# is_anagram("cristian", "Cristina") ➞ True
+#120
+
+# def is_anagram(s1, s2):
+#     return sorted(s1.lower()) == sorted(s2.lower())
+
+
+# print(is_anagram("cristian", "Cristina"))
+
