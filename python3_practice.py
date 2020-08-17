@@ -1349,3 +1349,201 @@
 
 # print(is_anagram("cristian", "Cristina"))
 
+# Lexicographically First and Last
+# first_and_last("marmite") ➞ ["aeimmrt", "trmmiea"]
+
+#121
+# def first_and_last(s):
+#     return [''.join(sorted(list(s))),''.join(sorted(list(s), reverse = True))]
+
+
+# print(first_and_last("marmite"))
+
+# Find the Missing Number
+# missing_num([1, 2, 3, 4, 6, 7, 8, 9, 10]) ➞ 5
+
+# def missing_num(lst):
+#     # for i in range (1, 11):
+#     #     if i not in lst:
+#     #         return i
+#     return 55 - sum(lst)
+    
+    
+
+# print(missing_num([1, 2, 3, 4, 6, 7, 8, 9, 10]))
+
+#122# Inputs:
+# User-typed: ["cat", "blue", "skt", "umbrells", "paddy"]
+# Correct: ["cat", "blue", "sky", "umbrella", "paddy"]
+
+# Output: [1, 1, -1, -1, 1]
+
+# correct_stream(
+#   ["it", "is", "find"],
+#   ["it", "is", "fine"]
+# ) ➞ [1, 1, -1]
+
+# def correct_stream(user, correct):
+#     # lst = []
+#     # for x, y in zip(user,correct):
+#     #     if x == y:
+#     #         lst.append(1)
+#     #     else:
+#     #         lst.append(-1)
+#     # return lst
+#     return [1 if x == y else -1 for x, y in zip(user,correct) ]
+
+        
+# print(correct_stream(
+#   ["it", "is", "find"],
+#   ["it", "is", "fine"]
+# ))
+
+#123
+# Count the Arguments
+# num_args("foo", "bar") ➞ 2
+# def num_args(*args):
+#     return len(args)
+    
+    
+# print(num_args("foo", "bar"))       
+    
+
+#124
+# Factorial of a Number
+
+# fact(3) ➞ 6
+
+# def fact(n):
+#     # if n == 1:
+#     #     return n
+#     # else:
+#     #     return n * fact(n-1)
+#     if n == 0: return 1
+#     return n if n == 1 else n * fact(n-1)
+
+# print(fact(3))
+
+#125
+
+# Return Odd > Even
+# Given a list, return True if there are more odd numbers than even numbers, otherwise return False.
+# oddeven([1, 2, 3, 4, 5, 6, 7, 8, 9]) ➞ True
+
+# def oddeven(lst):
+#     # return len([n for n in lst if n % 2 !=0]) >= len([n for n in lst if n % 2 == 0])
+#     return sum(1 if int(i)%2 else -1 for i in lst) > 0
+# print(oddeven([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+#125
+
+# Find the Mean of All Digits
+# mean(12345) ➞ 3
+
+# def mean(num):
+#     return sum(int(n) for n in str(num)) // len(str(num))
+
+# print(mean(789))
+
+#126
+# letter_counter([
+#   ["D", "E", "Y", "H", "A", "D"],
+#   ["C", "B", "Z", "Y", "J", "K"],
+#   ["D", "B", "C", "A", "M", "N"],
+#   ["F", "G", "G", "R", "S", "R"],
+#   ["V", "X", "H", "A", "S", "S"]
+# ], "D") ➞ 3
+# Create a function that counts the number of times a particular letter shows up in the word search.
+
+# def letter_counter(lst, letter):
+    # count = 0
+    # for sublist in lst:
+    #     for l in sublist:
+    #         if l == letter:
+    #             count +=1
+    # return count 
+    # return sum(sublist.count(letter) for sublist in lst )
+
+# print(letter_counter([
+# 	['D', 'D', 'Y', 'H', 'A', 'D'],
+# 	['C', 'B', 'Z', 'Y', 'J', 'K'],
+# 	['D', 'B', 'C', 'A', 'M', 'N'],
+# 	['F', 'G', 'G', 'R', 'S', 'R'],
+# 	['V', 'X', 'H', 'A', 'S', 'S']
+# ], 'D'))
+
+#127
+# letters_only("R!=:~0o0./c&}9k`60=y") ➞ "Rocky"
+# def letters_only(txt):
+#     return ''.join([l for l in txt if l.isalpha()])
+    
+
+# print(letters_only("R!=:~0o0./c&}9k`60=y"))
+
+#128
+
+# def mood_today(mood):
+#     return 'Today, I am feeling {}'.format(mood)    
+    
+# print(mood_today("happy"))
+
+#129
+# unique([3, 3, 3, 7, 3, 3]) ➞ 7
+
+# def unique(lst):
+#     # freq = {}
+    
+#     # for item in lst:
+#     #     if item in freq:
+#     #         freq[item] +=1
+#     #     else:
+#     #         freq[item] = 1
+            
+#     # return min(freq,key=freq.get)
+    
+#     return min(set(lst), key=lst.count)
+    
+        
+
+
+# print(unique([3, 3, 3, 7, 3, 3]))
+# lst = [3,3,4,4,5]
+# print(min(lst, key=lst.count))
+# print(min(("java", "python", "z++"), key=len))
+# 'z++'
+
+# 130
+# [
+#   { "tile": "N", "score": 1 },
+#   { "tile": "K", "score": 5 },
+#   { "tile": "Z", "score": 10 },
+#   { "tile": "X", "score": 8 },
+#   { "tile": "D", "score": 2 },
+#   { "tile": "A", "score": 1 },
+#   { "tile": "E", "score": 1 }
+# ]
+
+# maximum_score([
+#   { "tile": "N", "score": 1 },
+#   { "tile": "K", "score": 5 },
+#   { "tile": "Z", "score": 10 },
+#   { "tile": "X", "score": 8 },
+#   { "tile": "D", "score": 2 },
+#   { "tile": "A", "score": 1 },
+#   { "tile": "E", "score": 1 }
+# ]) ➞ 28
+
+
+# def maximum_score(tile_hand):
+#     return sum(d['score'] for d in tile_hand)
+    
+    
+# print(maximum_score([
+#   { "tile": "N", "score": 1 },
+#   { "tile": "K", "score": 5 },
+#   { "tile": "Z", "score": 10 },
+#   { "tile": "X", "score": 8 },
+#   { "tile": "D", "score": 2 },
+#   { "tile": "A", "score": 1 },
+#   { "tile": "E", "score": 1 }
+# ]))
