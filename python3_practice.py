@@ -1547,3 +1547,123 @@
 #   { "tile": "A", "score": 1 },
 #   { "tile": "E", "score": 1 }
 # ]))
+
+# 131
+# Return Only the Integer
+# return_only_integer([9, 2, "space", "car", "lion", 16]) ➞ [9, 2, 16]
+# def return_only_integer(lst):
+#     return [n for n in lst if type(n) == int]
+    
+    
+# print(return_only_integer([9, 2, "space", "car", "lion", 16]))
+
+# Get Sum of People's Budget
+
+
+#131
+# get_budgets([
+#   { "name": "John", "age": 21, "budget": 23000 },
+#   { "name": "Steve",  "age": 32, "budget": 40000 },
+#   { "name": "Martin",  "age": 16, "budget": 2700 }
+# ]) ➞ 65700
+
+
+# def get_budgets(lst):
+#     return sum(d['budget'] for d in lst)
+    
+# print(get_budgets([{"name": "John",  "age": 21, "budget": 23000}, {"name": "Steve",  "age": 32, "budget": 40000}, {"name": "Martin",  "age": 16, "budget": 2700}]))
+
+#132
+
+# How Many Solutions Does This Quadratic Have?
+
+#132
+# All About Lambda Expressions: Adding
+# adds1 = adds_n(1)
+
+# adds1 = lambda n : n + 1
+    
+# print(adds1(5))
+
+# def adds_n(n):
+# 	return lambda x: x + n
+
+# Toy Car Workshop
+# cars(2, 48, 76) ➞ 0
+# 2 wheels, 48 car bodies, 76 figures
+
+#133
+# def cars(wheels, bodies, figures):
+#     return min(wheels//4,figures // 2, bodies)
+
+
+# print(cars(37, 50, 20))
+
+#134
+
+# has_digit("c8") ➞ True
+
+# import re
+
+# def has_digit(txt):
+#     return bool(re.search(r'\d', txt))
+
+# print(has_digit('cdf4'))
+
+#135
+
+# def can_alternate(s):
+#     return True if abs(s.count('1') - s.count('0')) == 1 or s.count('1') == s.count('0') else False
+
+#     return abs(s.count('0') - s.count('1')) in (0, 1)
+
+# print(can_alternate('10101010'))
+
+#136
+
+# How Heavy Is It?
+# from math import pi
+
+# def weight(r, h):
+#     return round((pi * (r**2) * h)/1000,2)
+
+
+# print(weight(4, 10))
+    
+    
+# weight(4, 10) ➞ 0.5
+
+#137
+# findLargest(1,2,3), 3)
+# def findLargest(n1, n2, n3):
+# 	return max(n1, n2, n3)
+
+
+#138
+# profit({
+#   "cost_price": 32.67,
+#   "sell_price": 45.00,
+#   "inventory": 1200
+# }) ➞ 14796
+
+#139
+# def profit(info):
+#      return round(info['inventory'] * (info['sell_price'] - info['cost_price']))    
+    
+    
+# print(profit({
+#   "cost_price": 32.67,
+#   "sell_price": 45.00,
+#   "inventory": 1200
+# }))
+
+#140
+# is_valid_PIN("1234") ➞ True
+
+# def is_valid_PIN(pin):
+#     return (len(pin) == 4 or len(pin) == 6)  and pin.isdigit()
+#     return len(pin) in [4, 6] and pin.isdigit()
+
+# print(is_valid_PIN("1234"))
+
+
