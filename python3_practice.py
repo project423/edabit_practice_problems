@@ -1666,4 +1666,186 @@
 
 # print(is_valid_PIN("1234"))
 
+#141
+# 25-Mile Marathon
+# marathon_distance([1, 2, 3, 4]) ➞ False
 
+# def marathon_distance(d):
+#     return sum(abs(n) for n in d) == 25
+
+# print(marathon_distance([1, 9, 5, 8, 2]))
+
+#142
+
+# is_isogram("Algorism") ➞ True
+
+
+# def is_isogram(txt):
+#     return len(txt.lower()) == len(''.join(set(txt.lower())))
+# print(is_isogram("Dermatoglyphics"))
+
+#143
+
+# Convert Year to Century
+# century_from_year(2005) ➞ 21
+
+# from math import ceil
+
+# def century_from_year(year):
+#     return ceil(year/100)
+
+# print(century_from_year(1705))
+
+#144
+# Basic Calculator
+# Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+
+# def calculator(num1, operator, num2):
+#     if num2: 
+#         return round(eval('{} {} {}'.format(num1,operator,num2)))
+#     else:
+#         return 'Can\'t divide by 0!'
+
+# print(calculator(2, '/', 3))
+
+#145
+# Folding a Piece of Paper
+# def num_layers(n):
+#     if not n:
+#         return "0.0005m"
+#     return '{}m'.format(0.5*2**n/1000)
+    
+# print(num_layers(3))
+
+#146
+
+# find_bob(["Jimmy", "Layla", "Bob"]) ➞ 2
+# def find_bob(names):
+#     try:
+#         return names.index("Bob")
+#     except:
+#         return -1    
+    
+# print(find_bob(["Jimmy", "Layla"]))
+
+#145
+# remove_enemies(["Adam", "Emmy", "Tanya", "Emmy"], ["Emmy"]) ➞ ["Adam", "Tanya"]
+# remove_enemies(["John", "Emily", "Steve", "Sam"], ["Sam", "John"]) ➞ ["Emily", "Steve"]
+# def remove_enemies(names, enemies):
+#     return [n for n in names if n not in enemies]
+    
+    
+# print(remove_enemies(["Adam", "Emmy", "Tanya", "Emmy"], ["Emmy"]))
+# print(remove_enemies(["John", "Emily", "Steve", "Sam"], ["Sam", "John"]))
+
+#146
+# convert_to_decimal(["1%", "2%", "3%"]) ➞ [0.01, 0.02, 0.03]
+
+# def convert_to_decimal(perc):
+#     return [float(n.strip('%')) / 100 for n in perc]
+
+
+# print(convert_to_decimal(["33%", "98.1%", "56.44%", "100%"]))
+
+#147
+# remove_vowels("I have never seen a thin person drinking Diet Coke.")
+# ➞ " hv nvr sn  thn prsn drnkng Dt Ck."
+
+# def remove_vowels(txt):
+#     return ''.join(c for c in txt if c.lower() not in ['a','e','i','o','u'])
+    
+# print(remove_vowels("If Obama resigns from office NOW, thereby doing a great service to the country - I will give him free lifetime golf at any one of my courses!"))
+
+#148
+# trace([
+#   [1, 4],
+#   [4, 1]
+# ]) ➞ 2
+
+# def trace(lst):
+#     total = 0
+#     for i in range(len(lst)):
+#         total += lst[i][i]
+#     return total
+
+# def trace(arr):
+#     	return sum(arr[i][i] for i in range(len(arr)))
+    
+
+#     # return lst[0][0] + lst[1][1] + lst[2][2]
+ 
+# print(trace([
+#   [1, 4],
+#   [4, 1]
+# ])) 
+
+# print(trace([
+#   [1, 2, 3],
+#   [4, 5, 6],
+#   [7, 8, 9]
+# ])) 
+ 
+# trace([
+#   [1, 4],
+#   [4, 1]
+# ]) 
+
+#149
+# Multi-division
+# abcmath(42, 5, 10) ➞ False
+
+# 42+42 = 84,84+84 = 168,168+168 = 336,336+336 = 672, 672+672 = 1344
+# 1344 is not divisible by 10
+# def abcmath(a, b, c):
+#     for i in range(1,b+1):
+#         a +=a
+#     return a % c == 0
+    
+    
+
+# print(abcmath(42, 5, 10))
+# print(abcmath(261, 2, 1))
+
+#150
+
+# Probabilities (Part 1)
+# probability([5, 1, 8, 9], 6) ➞ 50.0
+
+# def probability(lst, n):
+#    return round(len(list(filter(lambda i: i >= n, lst))) / len(lst) * 100,1)
+    
+    
+    
+# print(probability([11, 10, 9, 18, 16, 18, 4, 3, 5], 13)) 
+
+#151
+# Find the Second Largest Number
+# second_largest([10, 40, 30, 20, 50]) ➞ 40
+# def second_largest(lst):
+#     return sorted(lst)[-2]
+
+# print(second_largest([10, 40, 30, 20, 50]))
+
+# print(second_largest([25, 143, 89, 13, 105])) 
+
+
+#152
+
+# jazzify(["G", "F", "C"]) ➞ ["G7", "F7", "C7"]
+
+# def jazzify(lst):
+#     return [l if l.endswith('7') else l + '7' for l in lst]
+    
+# print(jazzify(['G7', 'F7', 'C']))
+
+#153
+
+# clone([1, 1]) ➞ [1, 1, [1, 1]]
+
+# def clone(lst):
+#     lst.append(lst[:])
+#     return lst
+    
+    
+
+# print(clone([1, 1]))
