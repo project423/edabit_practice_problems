@@ -1849,3 +1849,31 @@
     
 
 # print(clone([1, 1]))
+
+#154
+# List Multiplier
+
+# def multiply(l):
+#     if type(l[0]) == int:
+#         return [[int(i) for i in str(elem).split(',') * len(l)] for elem in l]
+#     else:
+#         return [str(i).split(',') * len(l) for i in l]
+        
+
+    
+    
+# print(multiply([4,5]))
+        # lst = []
+        # for elem in l:
+        #     # elem = str(elem)
+        #     # temp = str(elem).split(',')
+        #     lst.append([int(i) for i in str(elem).split(',') * len(l)])
+        # return lst
+        
+# def multiply(lst):
+# 	return [[i]*len(lst) for i in lst]
+
+# print(multiply([4, 5]))
+
+# print([3]*5)
+
