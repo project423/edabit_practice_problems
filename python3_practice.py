@@ -1877,3 +1877,203 @@
 
 # print([3]*5)
 
+# 155
+
+# showdown(
+#   "   Bang!        ",
+#   "        Bang!   "
+# ) ➞ "p1"
+
+
+# def showdown(p1, p2):
+#     if p1.find('B') == p2.find('B'):
+#         return  "tie"
+#     elif p1.find('B') > p2.find('B'):
+#         return 'p2'
+#     else:
+#         return 'p1'   
+#     # return "tie" if p1 == p2 else ("p1" if p1 > p2 else "p2")
+
+# print(showdown(
+# "  Bang!",
+# " Bang!   "
+# ))
+
+#156
+# Vowel Sandwich
+# is_vowel_sandwich("cat") ➞ True
+# is_vowel_sandwich("bake") ➞ False
+
+# def is_vowel_sandwich(s):
+#     if len(s) != 3:
+#         return False
+#     lst =  [i for i in s]
+#     vowels = ['a','e','i','o','u']
+#     return (lst[0] not in vowels) and (lst[1] in vowels) and (lst[2] not in vowels)
+#     return [0, 1, 0] == [1 if l in 'aeiou' else 0 for l in s]
+         
+    
+# print(is_vowel_sandwich("cat"))
+
+#157
+
+
+# # bitwise_and(7, 12) ➞ 4
+
+# # bitwise_and(6, 23) ➞ 00000110
+# # bitwise_and(7, 12) ➞ 4
+# def bitwise_and(n1, n2):
+#     return n1 & n2
+
+# def bitwise_or(n1, n2):
+#     return n1 | n2
+
+# def bitwise_xor(n1, n2):
+#     return n1 ^ n2
+
+
+# print(bitwise_and(7, 12))
+# # bitwise_or(6, 23) ➞ 00010111
+# print(bitwise_or(7,12))
+# # bitwise_or(7, 12) ➞ 15
+# # def bitwise_or(n1, n2):
+	
+
+# # bitwise_xor(6, 23) ➞ 00010001
+# print(bitwise_xor(7, 12)) #➞ 11
+# # def bitwise_xor(n1, n2):
+
+
+#158
+# is_symmetrical(7227) ➞ True
+
+# def is_symmetrical(num):
+#     return str(num) == str(num)[::-1]
+    
+# print(is_symmetrical(7227))
+
+#159
+
+# sum_of_evens([
+#   [1, 0, 2],
+#   [5, 5, 7],
+#   [9, 4, 3]
+# ]) ➞ 6
+
+# Create a function that returns the sum of all even elements in a 2D matrix.
+
+# def sum_of_evens(lst):
+#     # total = 0
+#     # for sublist in lst:
+#     #     for i in sublist:
+#     #         if i % 2 == 0:
+#     #             total += i
+#     # return total   
+#     return sum(i for sublist in lst for i in sublist if i % 2 == 0)
+ 
+# print(sum_of_evens([
+# 		[1, 5, 1, 3], 
+# 		[4, 1, 2, 0], 
+# 		[6, 9, 7, 4], 
+# 		[5, 1, 2, 6]
+# 	]))
+
+# def count_ones(matrix):
+#     # flat_list = []
+#     # for sublist in matrix:
+#     #     for i in sublist:
+#     #         flat_list.append(i)
+#     # return flat_list
+#     return [i for sublist in matrix for  i in sublist]
+
+#160
+# Amplify the Multiples of Four
+# If the number can be divided evenly by 4, amplify it by 10 (i.e. return 10 times the number).
+# If the number cannot be divided evenly by 4, simply return the number.
+
+# amplify(4) ➞ [1, 2, 3, 40]
+
+# def amplify(num):
+#     return [i * 10 if i % 4 == 0 else i for i in range(1, num+1)]
+
+# print(amplify(4))
+
+#161
+# Move Capital Letters to the Front
+# cap_to_front("moveMENT") ➞ "MENTmove"
+
+# def cap_to_front(s):
+#     upper = []
+#     lower = []
+#     str1 = ''
+#     for char in [l for l in s]:
+#         upper.append(char) if char.isupper() else lower.append(char)
+#     upper.extend(lower)
+#     return str1.join(upper)
+    
+# print(cap_to_front("moveMENT"))
+
+#162
+# Go Corona!
+# end_corona(4000, 2000, 77000) ➞ 39
+
+# def end_corona(recovers, new_cases, active_cases):
+#     total_days = 0
+#     while active_cases >= 0:
+#         total_days += 1
+#         active_cases += new_cases
+#         active_cases -= recovers
+#     return total_days
+        
+        
+    
+    
+# print(end_corona(30000, 25000, 390205))
+
+#163
+# One Button Messaging Device
+# Imagine a messaging device with only one button. For the letter A, you press the button one time, for E, you press it five times, for G, it's pressed seven times, etc, etc.
+# Write a function that takes a string (the message) and returns the total number of times the button is pressed.
+
+
+# def how_many_times(msg):
+#     return sum(ord(letter) - 96 for letter in msg)
+    
+ 
+# print(how_many_times('abde'))
+
+#164
+# convert_cartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]) ➞ [[1, 5], [5, 8], [3, 9], [3, 1], [4, 0]]
+
+# def convert_cartesian(x, y):
+#     return [list(i) for i in zip(x,y)]
+    
+    
+# print(convert_cartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]))
+
+#165
+
+# Moving to the End
+# move_to_end([1, 3, 2, 4, 4, 1], 1) ➞ [3, 2, 4, 4, 1, 1]
+
+# def move_to_end(lst, el):
+#     return [x for x in lst if x !=el] + [y for y in lst if y == el]
+
+# print(move_to_end([1, 3, 2, 4, 4, 1], 1))
+
+
+#166
+# split("abcde") ➞ "aebcd"
+# def split(txt):
+#     vowels = []
+#     consonants = []
+#     for l in txt:
+#         if l in 'aeiou':
+#             vowels.append(l)
+#         else:
+#             consonants.append(l)
+#     return ''.join(vowels + consonants)
+
+# print(split("abcde"))
+
+
