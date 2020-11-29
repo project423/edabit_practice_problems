@@ -2076,4 +2076,186 @@
 
 # print(split("abcde"))
 
+#167
 
+# 11/17/20
+# Create a function that takes the age and return the age in days.
+# calc_age(65) ➞ 23725
+
+# calc_age(0) ➞ 0
+
+# calc_age(20) ➞ 7300
+
+# def calc_age(age):
+#     return age * 365
+
+# print(calc_age(10))
+
+#168
+# Burglary Series (04): Add its Name
+
+# add_name({}, "Brutus", 300) ➞ { "Brutus": 300 }
+
+# add_name({ "piano": 500 }, "Brutus", 400) ➞ { "piano": 500, "Brutus": 400 }
+
+# add_name({ "piano": 500, "stereo": 300 }, "Caligula", 440) ➞ { "piano": 500, "stereo": 300, "Caligula": 440 }
+
+# def add_name(obj, name, value):
+#     obj.update({name:value})
+#     return obj
+    
+    
+# print(add_name({}, "Brutus", 300))
+
+# 169
+# Proper Modulo Operator
+
+# mod(-13, 64) ➞ 51
+
+# mod(50, 25) ➞ 0
+
+# mod(-6, 3) ➞ 0
+
+# def mod(m, n):
+#     return m % n
+
+# print(mod(-13, 64))
+
+#170
+# Two Lists inside a List to One
+
+# one_list([[1, 2], [3, 4]]) ➞ [1, 2, 3, 4]
+
+# def one_list(lst):
+#     # new_list = []
+#     # for sublist in lst:
+#     #     for l in sublist:
+#     #         new_list.append(l)
+#     # return new_list
+    
+#     return [l for sublist in lst for l in sublist]
+    
+# print(one_list([[1, 2], [3, 4]]))
+
+#171
+# Is the String Odd or Even?
+# Given a string, return True if its length is even or False if the length is odd.
+# odd_or_even("apples") ➞ True
+
+# def odd_or_even(word):
+#     return len(word) % 2 == 0
+# print(odd_or_even("apples")) 
+
+# 172
+# Convert All List items to String
+# Create a function that takes a list of integers and strings. Convert integers to strings and return the new list.
+# parse_list([1, 2, "a", "b"]) ➞ ["1", "2", "a", "b"]
+
+
+# def parse_list(lst):
+#     return [str(l) for l in lst]
+
+
+# print(parse_list([1, 2, "a", "b"]))
+
+
+
+# 173
+
+# make_pair(1, 2) ➞ [1, 2]
+
+# def make_pair(num1, num2):
+#     return  [num1, num2]
+
+# print(make_pair(1,2))
+
+#174
+# Tile Teamwork Tactics
+# Given you and your friend's tile number, create a function that returns if it's possible to earn a bonus when you roll the dice.
+
+# possible_bonus(3, 7) ➞ True
+
+# def possible_bonus(a, b):
+#     if a > b or a ==b:
+#         return False
+#     elif b - a < 7:
+#         return True
+#     else:
+#         return False
+    
+
+# 175   
+# def possible_bonus(a,b):
+#     return b - a < 7 and b !=a and b > a
+
+# print(possible_bonus(7, 6))
+    
+# 176
+# Miserable Parody of a Calculator
+
+# calculator("23+4") ➞ 27
+
+#176
+# def calculator(txt):
+#     return eval(txt)
+
+
+# print(calculator("23+4")) 
+
+#177
+# Sum of List Less Than 100 List Remix
+
+# list_less_than_100([5, 57])
+# Given a list of numbers, return True if the sum of the values in the list is less than 100; otherwise return False.
+
+# list_less_than_100([5, 57])
+
+# def list_less_than_100(lst):
+#     return sum(lst) < 100
+
+# print(list_less_than_100([5, 57]))
+
+
+# 178
+
+# WordCharWord
+
+# Create a function that will put the first argument, a character, between every word in the second argument, a string.
+# add("R", "python is fun") ➞ "pythonRisRfun"
+
+# def add(char, txt):
+#     return txt.replace(" ", char)
+
+
+# print(add("R", "python is fun"))
+
+# 179
+# Create a function that counts how many D's are in a sentence.
+# count_d("My friend Dylan got distracted in school.") ➞ 4
+
+# def count_d(sentence):
+#     return sentence.lower().count('d')
+    
+# print(count_d("My friend Dylan got distracted in school."))
+
+# 180
+# Recreating the abs() Function
+
+# Create a function that recreates this functionality.
+
+# absolute(-5) ➞ 5
+
+# def absolute(n):
+#     return n if n > 0 else n*(-1)
+
+# print(absolute(0))
+
+#181
+
+# circuit_power(230, 10) ➞ 2300
+
+# def circuit_power(voltage, current):
+#     return voltage * current
+    
+    
+# print(circuit_power(230,10))
