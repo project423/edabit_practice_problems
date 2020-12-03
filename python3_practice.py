@@ -2259,3 +2259,280 @@
     
     
 # print(circuit_power(230,10))
+
+# 182
+# def inches_to_feet(inches):
+#     return int(inches / 12) if inches >= 12 else 0
+    
+# # inches_to_feet(324) ➞ 27
+
+# print(inches_to_feet(12))
+
+#183
+
+# def check_equals(lst1, lst2):
+#     lst1.sort()
+#     lst2.sort()    
+#     return True if lst1 == lst2 else False
+
+
+# print(check_equals([1, 2], [1, 3]))
+
+
+#184
+# from random import randint
+# def random_int(a, b):
+#     return randint(a,b)
+
+
+# print(random_int(5, 9))
+
+
+#185
+# Luke, I Am Your ...
+
+# def relation_to_luke(name):
+#     dict = {
+#         'Darth Vader': 'father',
+#         'Leia': 'sister',
+#         'Han': 'brother in law',
+#         'R2D2': 'droid'
+#     }
+    
+#     return "Luke, I am your {}.".format(dict[name])
+    
+
+# print(relation_to_luke("Darth Vader"))
+
+# 186
+# Convert a Number to Base-2
+
+# binary(5) ➞ "101"
+
+# def binary(decimal):
+#     return bin(decimal)[2:]
+
+# print(binary(100))
+
+# 187
+
+# Capitalize by ASCII
+# Create a function that takes a string as input and capitalizes a letter if its ASCII code is even and returns its lower case version if its ASCII code is odd.
+
+# def ascii_capitalize(txt):
+#     my_str = ''
+#     for letter in txt:
+#         if ord(letter) % 2 == 0:
+#             my_str += letter.upper()
+#         else:
+#             my_str += letter.lower()
+#     return my_str
+# # ascii_capitalize("to be or not to be!") ➞ "To Be oR NoT To Be!"
+# print(ascii_capitalize("Oh what a beautiful morning."))
+
+# print(ord('O'))
+
+#188
+# Say Hello to Guests
+
+# In this exercise you will have to:
+
+# Take a list of names.
+# Add "Hello" to every name.
+# Make one big string with all greetings.
+# The solution should be one string with a comma in between every "Hello (Name)".
+# greet_people(["Angela", "Joe"]) ➞ "Hello Angela, Hello Joe"
+
+#189
+# def greet_people(names):
+#     return ', '.join("Hello " + name  for name in names)
+        
+    
+    
+# print(greet_people(["Angela", "Joe"]))
+
+# 190
+# Upper or Lower Case
+# Return the smallest number of steps it takes to convert a string entirely into uppercase or entirely into lower case, whichever takes the fewest number of steps. A step consists of changing one character from lower to upper case, or vice versa.
+
+# def steps_to_convert(txt):
+#     return min(sum(1 for c in txt if c.isupper()), sum(1 for c in txt if c.islower()))
+#     #     return sum(1 for c in txt if c.islower())
+#     # else:
+#     #     return sum(1 for c in txt if c.isupper())
+
+
+# print(steps_to_convert("abCBA"))
+
+#191
+
+# Burglary Series (10): Calculate Difference
+# calc_diff({ "baseball bat": 20 }, 5) ➞ 15
+
+# def calc_diff(obj, limit):
+#     return sum(value for value in obj.values()) - limit    
+    
+
+
+# # print(calc_diff({ "baseball bat": 20 }, 5))
+# print(calc_diff({"skate": 10, "painting": 20 }, 19))
+
+
+#192
+# Square Every Digit
+# Create a function that squares every digit of a number.
+
+# def square_digits(n):
+#     return int(''.join(str(int(i)**2) for i in str(n)))
+    
+    
+# print(square_digits(9119))
+
+#193
+# Halloween Day
+# Create a function that takes date in the format yyyy/mm/dd as an input and returns "Bonfire toffee" if the date is October 31, else return "toffee".
+
+# halloween("2013/10/31") ➞ "Bonfire toffee"
+
+# halloween("2012/07/31") ➞ "toffee"
+
+# halloween("2011/10/12") ➞ "toffee"
+
+# def halloween(dt):
+#     month =  int(dt[5:].split('/')[0])
+#     day =  int(dt[5:].split('/')[1])
+#     if day == 31 and month == 10:
+#         return 'Bonfire toffee'
+#     else:
+#         return 'toffee'
+    
+
+
+# dt[5:].split('/')[0]
+    
+    
+# print(halloween("2013/10/31"))
+
+# 194
+# Something in the Box?
+# Create a function that returns True if an asterisk * is inside a box.
+# in_box([
+#   "###",
+#   "#*#",
+#   "###"
+# ]) ➞ True
+
+# def in_box(lst):
+#     for sublist in lst:
+#         if sublist[0] =='#' and sublist[-1] == '#':
+#             if '*' in sublist:
+#                 return True
+#     return False 
+    
+#     return any('*' in row for row in lst)           
+            
+# return "*" in [item for sublist in lst for item in sublist]
+    
+# print(in_box(["###","#*#","###"]))
+
+# print(in_box([
+#   "*####",
+#   "# #",
+#   "#  #*",
+#   "####"
+# ]))
+
+
+# 195
+
+# Automorphic Numbers
+# A number n is automorphic if n^2 ends in n.
+# Create a function that takes a number and returns True if the number is automorphic, False if it isn't.
+
+# is_automorphic(5) ➞ True
+
+# is_automorphic(8) ➞ False
+# def is_automorphic(n):
+#     return str(pow(n,2)).endswith(str(n))
+    
+# print(is_automorphic(5))
+
+# 196
+# Shhh Be Quiet Function
+# shhh("HI THERE!") ➞ '"Hi there!", whispered Edabit.'
+# shhh("tHaT'S Pretty awesOme") ➞ '"That's pretty awesome", whispered Edabit.'
+
+
+# def shhh(txt):
+#     return "\"{}\", whispered Edabit.".format(txt.capitalize())
+    
+    
+# print(shhh("tHaT'S Pretty awesOme"))
+# print(shhh("HI THERE!"))
+# # 'Hi there!, whispered Edabit.' should equal '"Hi there!", whispered Edabit.'
+# '"Hi there!, whispered Edabit."' should equal '"Hi there!", whispered Edabit.'
+
+# 197
+# Halve and Halve Again
+# halve_count(1324, 98) ➞ 3
+# (1324 -> 662 -> 331 -> 165.5)
+
+# def halve_count(a, b):
+#     i = 0
+#     while a > b:
+#         a = a/2
+#         i+=1
+#     return i-1
+    
+# print(halve_count(1324, 98))
+
+# 198
+# Total Volume of All Boxes
+# total_volume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]) ➞ 63
+
+# def total_volume(*boxes):
+#     volumes = []
+#     for sublist in boxes:
+#         product = sublist[0] * sublist[1] * sublist[2]
+#         volumes.append(product)
+#     return sum(volumes)
+            
+            
+    
+# print(total_volume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]))
+
+#199
+# Numbers to Arrays and Vice Versa
+# to_list(), which converts a number to an integer list of its digits.
+# to_number(), which converts a list of integers back to its number.
+
+# to_list(235) ➞ [2, 3, 5]
+
+# to_list(0) ➞ [0]
+# def to_list(num):
+#     return [int(d) for d in str(num) ]
+
+# print(to_list(235))
+
+# to_number([2, 3, 5]) ➞ 235
+
+# to_number([0]) ➞ 0
+# def to_number(lst):
+#     s = [str(i) for i in lst]
+    
+#     res = int("".join(s))
+    
+#     return res
+
+# print(to_number([2, 3, 5]))
+
+# 200
+# Length of Number
+# can't use len()
+# number_length(5000) ➞ 4
+def number_length(num):
+    return num % 10
+
+print(number_length(1000))
+
+print()
