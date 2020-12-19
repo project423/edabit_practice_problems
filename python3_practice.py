@@ -2530,9 +2530,197 @@
 # Length of Number
 # can't use len()
 # number_length(5000) ➞ 4
-def number_length(num):
-    return num % 10
+# def number_length(num):
+#     count = 0
+#     if num == 0:
+#         return 1
+#     while num > 0:
+#         count += 1
+#         num = num // 10
+#     return count
+# print(number_length(40))
 
-print(number_length(1000))
+#201
+# num_of_digits(1000) ➞ 4
+# num_of_digits(1305981031) ➞ 10
+# def num_of_digits(num):
+#     return len(str(abs(num)))
 
-print()
+# print(num_of_digits(-1305981031))
+
+#202
+
+# Equality of 3 Values
+
+# equal(3, 4, 3) ➞ 2
+
+# equal(1, 1, 1) ➞ 3
+
+# equal(3, 4, 1) ➞ 0 
+
+# def equal(a, b, c):
+#     my_set = {a,b,c}
+#     length_of_set = len(my_set)
+#     if length_of_set  == 1:
+#         return 3
+#     elif length_of_set == 2:
+#         return 2
+#     else:
+#         return 0
+    
+# print(equal(3, 3, 3))
+
+#203
+# Chat Room Status
+# chatroom_status(["s234f", "mailbox2"]) ➞ "s234f and mailbox2 online"
+
+# def chatroom_status(users):
+#     if len(users) == 0:
+#         return "no one online"
+#     elif len(users) == 1:
+#         return "{} online".format(users[0])
+#     elif len(users) == 2:
+#         return "{} and {} online".format(users[0],users[1])
+#     else:
+#         remaining_users = len(users) - 2
+#         return "{}, {} and {} more online".format(users[0], users[1], remaining_users)
+    
+    
+# # print(chatroom_status(["s234f", "mailbox2"]))
+# print(chatroom_status(['john','kate','will','bob']))
+
+#204
+# Retrieve the Last N Elements
+# last([1, 2, 3, 4, 5], 1) ➞ [5]
+# last([1, 2, 3, 4, 5], 1) ➞ [5]
+
+# last([4, 3, 9, 9, 7, 6], 3) ➞ [9, 7, 6]
+
+# last([1, 2, 3, 4, 5], 7) ➞ "invalid"
+
+# last([1, 2, 3, 4, 5], 0) ➞ []
+
+# def last(a, n):
+#     # if n == 0:
+#     #     return []
+#     # elif len(a) == 0:
+#     #     return 'invalid'
+#     # elif len(a) < n:
+#     #     return 'invalid'
+#     # return a[-n:] 
+#     return 'invalid' if n>len(a) else a[len(a)-n:]
+
+# print(last([4, 3, 9, 9, 7, 6], 3))
+# print(last([1, 2, 3, 4, 5], 5))
+
+
+#205
+# Right Shift by Division
+
+# shift_to_right(80, 3) ➞ 10
+# shift_to_right(-24, 2) ➞ -6
+
+# import math
+# def shift_to_right(x, y):
+#     return math.floor(x/pow(2,y))
+
+
+# print(shift_to_right(80, 3))
+# print(shift_to_right(4666, 6))
+# print(shift_to_right(-5, 1))
+
+#206
+# Functioninator 8000
+
+# inator_inator("Shrink") ➞ "Shrinkinator 6000"
+
+# inator_inator("Doom") ➞ "Doominator 4000"
+
+# inator_inator("EvilClone") ➞ "EvilClone-inator 9000"
+
+# def inator_inator(inv):
+#     if inv[-1].lower() in 'aeiou':
+#         return '{}-inator {}000'.format(inv,len(inv))
+#     else:
+#         return '{}inator {}000'.format(inv,len(inv))
+
+
+# print(inator_inator("bEE"))
+
+
+# 207
+# multiply_nums("2, 3") ➞ 6
+
+# multiply_nums("1, 2, 3, 4") ➞ 24
+
+# multiply_nums("54, 75, 453, 0") ➞ 0
+
+# multiply_nums("10, -2") ➞ -20
+
+# def multiply_nums(nums):
+#     product = 1
+#     for num in nums.split(', '):
+#         product *= int(num)
+#     return product
+
+# print(multiply_nums("2, 3"))
+
+#208
+# Make a Circle with OOP
+# circy = Circle(11)
+# circy.getArea()
+
+# Should return 380.132711084365
+
+# circy = Circle(4.44)
+# circy.getPerimeter()
+
+# Should return 27.897342763877365
+
+# from math import pi
+
+# class Rectangle:
+    
+# 	def __init__(self, sideA=0, sideB=0):
+# 		self.sideA = sideA
+# 		self.sideB = sideB
+
+# 	def getArea(self):
+# 		return self.sideA * self.sideB
+  
+# 	def getPerimeter(self):
+# 		return 2 * (self.sideA + self.sideB)
+
+# class Circle:
+
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def getArea(self):
+#         return pi * pow(self.radius,2)
+
+#     def getPerimeter(self):
+#         return 2 * pi * self.radius
+
+
+# circle = Circle(11)
+# print(circle.getArea())
+
+# circy = Circle(4.44)
+# print(circy.getPerimeter())
+
+#209
+# Odds vs. Evens
+# Given an integer, return "odd" if the sum of all odd digits is greater than the sum of all even digits. Return "even" if the sum of even digits is greater than the sum of odd digits, and "equal" if both sums are the same.
+
+
+# odds_vs_evens(97428) ➞ "odd"
+# odds_vs_evens(81961) ➞ "even"
+# odds_vs_evens(54870) ➞ "equal"
+
+# def odds_vs_evens(num):
+#     even_total =  sum(int(num) for num in str(num) if int(num) % 2 == 0)
+#     odd_total =  sum(int(num) for num in str(num) if int(num) % 2 != 0)
+#     return 'odd' if odd_total > even_total else 'even' if even_total > odd_total else 'equal'
+
+# print(odds_vs_evens(97428))
