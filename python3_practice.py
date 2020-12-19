@@ -2724,3 +2724,20 @@
 #     return 'odd' if odd_total > even_total else 'even' if even_total > odd_total else 'equal'
 
 # print(odds_vs_evens(97428))
+
+# 210
+# Video Length in Seconds
+# minutes_to_seconds("01:00") ➞ 60
+
+# minutes_to_seconds("13:56") ➞ 836
+
+# minutes_to_seconds("10:60") ➞ False
+
+# def minutes_to_seconds(time):
+#     if int(time.split(':')[1]) >= 60:
+#         return False
+#     return  int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+#     # m, s = map(int, time.split(':'))
+# 	# return False if s >= 60 else m*60 + s
+
+# print(minutes_to_seconds("13:56"))
