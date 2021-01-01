@@ -2741,3 +2741,202 @@
 # 	# return False if s >= 60 else m*60 + s
 
 # print(minutes_to_seconds("13:56"))
+
+
+# 211
+# Pythagorean Triplet
+# is_triplet(3, 4, 5) ➞ True
+# 3² + 4² = 25
+# 5² = 25
+
+# is_triplet(13, 5, 12) ➞ True
+# 5² + 12² = 169
+# 13² = 169
+
+# is_triplet(1, 2, 3) ➞ False
+# 1² + 2² = 5
+# 3² = 9
+
+# def is_triplet(n1, n2, n3):
+#     sorted_list = sorted([n1,n2,n3])
+#     return pow(sorted_list[0],2) + pow(sorted_list[1],2) == pow(sorted_list[2],2)
+    #   a, b, c = sorted(n)
+    #   return a*a + b*b == c*c
+
+# print(is_triplet(3,4,5))
+
+# 212
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+#     def compare_age(self,other):
+#         if self.age > other.age:
+#             return '{} is younger than me.'.format(other.name)
+#         elif self.age < other.age:
+#             return '{} is older than me.'.format(other.name)
+#         else:
+#             return '{} is the same age as me.'.format(other.name)
+
+
+# p1 = Person("Samuel", 24)
+# p2 = Person("Joel", 36)
+# p3 = Person("Lily", 24)
+
+# print(p1.compare_age(p2))
+# print(p2.compare_age(p1))
+# print(p1.compare_age(p3))
+
+
+# 213
+# Reverse Words Starting With a Particular Letter
+# special_reverse("word searches are super fun", "s")
+# ➞ "word sehcraes are repus fun"
+
+# special_reverse("first man to walk on the moon", "m")
+# ➞ "first nam to walk on the noom"
+
+# special_reverse("peter piper picked pickled peppers", "p")
+# ➞ "retep repip dekcip delkcip sreppep"
+
+
+# def special_reverse(s, c):
+#     return ' '.join(word[::-1] if word[0] in c else word for word in s.split(' ') )
+    
+
+# print(special_reverse("word searches are super fun", "s"))
+
+#214
+# "EdaBit" Challenge
+# Create a function that returns the list of numbers from a given range. But for multiples of three, return “Eda” instead of the number and for the multiples of five, return “Bit”. For numbers which are multiples of both three and five, return “EdaBit”.
+
+# eda_bit(0, 10) ➞ ["EdaBit", 1, 2, "Eda", 4, "Bit", "Eda", 7, 8, "Eda", "Bit" ]
+
+# def eda_bit(start, end):
+#     answers = []
+#     for num in range(start,end + 1):
+#         if num % 3 == 0 and num % 5 == 0:
+#             answers.append('EdaBit')
+#         elif num % 3 == 0:
+#             answers.append('Eda')
+#         elif num % 5 == 0:
+#             answers.append('Bit')
+#         else:
+#             answers.append(num)
+#     return answers
+
+
+# print(eda_bit(1,20))
+
+# 215
+# Jay and Silent Bob Weight Convertor
+# Jay and Silent Bob have been given a fraction of an ounce but they only understand grams. Convert a fraction passed as a string to grams with up to two decimal places. An ounce weighs 28 grams.
+# jay_and_bob("half") ➞ "14 grams"
+
+# jay_and_bob("quarter") ➞ "7 grams"
+
+# jay_and_bob("eighth") ➞ "3.5 grams"
+
+# def jay_and_bob(txt):
+#     weights = {
+#         "half": "14 grams",
+#         "quarter": "7 grams",
+#         "eighth": "3.5 grams",
+#         "sixteenth": "1.75 grams"
+#     }
+#     return weights[txt]
+
+# print(jay_and_bob('sixteenth'))
+
+#216
+# Applying Discounts
+# get_discounts([2, 4, 6, 11], "50%") ➞ [1, 2, 3, 5.5]
+
+# def get_discounts(nums, d):
+#     discount = int(d.strip('%'))/100
+#     return [num * discount for num in nums]
+    
+
+
+# print(get_discounts([2, 4, 6, 11], "50%"))
+# # print(get_discounts([100], "45%"))
+
+
+#217
+
+# Return First and Last Parameter
+# first_arg(1, 2, 3) ➞ 1
+
+# last_arg(1, 2, 3) ➞ 3
+
+# first_arg(8) ➞ 8
+
+# last_arg(8) ➞ 8
+
+
+# def first_arg(*args):
+#     if len(args) == 0:
+#         return None
+#     return args[0]
+
+# print(first_arg(4))
+
+# def last_arg(*args):
+#     if len(args) == 0:
+#         return None
+#     return args[-1]
+
+# print(last_arg(1,2,3,4,69))
+# # def last_arg():
+# # 	pass
+
+# def first_arg(*args):
+#     if args: return args[0]
+
+# def last_arg(*args):
+# 	if args: return args[-1]
+
+#218
+# You will be implementing a basic case of the map-reduce pattern in programming. Given a vector stored as a list of integers, find the magnitude of the vector. Use the standard distance formula for n-dimensional Cartesian coordinates.
+# magnitude([3, 4]) ➞ 5
+
+# magnitude([0, 0, -10]) ➞ 10
+
+# magnitude([]) ➞ 0
+
+# magnitude([2, 3, 6, 1, 8] ) ➞ 10.677078252031311
+
+# import numpy as np
+
+# def magnitude(lst):
+#     return (np.linalg.norm(lst))
+
+# print(magnitude([3,4]))
+
+#219
+# Card Counting (BlackJack)
+# In BlackJack, cards are counted with -1, 0, 1 values:
+
+# 2, 3, 4, 5, 6 are counted as +1
+# 7, 8, 9 are counted as 0
+# 10, J, Q, K, A are counted as -1
+# count([5, 9, 10, 3, "J", "A", 4, 8, 5]) ➞ 1
+
+# def count(deck):
+    # count = 0
+    # for card in deck:
+    #     if card in [10, "J", "Q", "K", "A"]:
+    #         count -= 1
+    #     elif card > 6 and card < 10:
+    #         continue
+    #     else:
+    #         count +=1
+    # return count
+    # return sum(-1 if c in [10, 'J', 'Q', 'K','A'] else 1 if c < 7 else 0 for c in deck)
+    
+
+# print(count([5, 9, 10, 3, "J", "A", 4, 8, 5]))
+
+# print(count([5, 9, 10, 3, "J", "A", 4, 8, 5]))
+
