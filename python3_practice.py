@@ -2940,3 +2940,60 @@
 
 # print(count([5, 9, 10, 3, "J", "A", 4, 8, 5]))
 
+#220
+# Apocalyptic Numbers
+
+# apocalyptic(109) ➞ "Crisis averted. Resume sinning."
+
+# apocalyptic(157) ➞ "Repent! 9 days until the Apocalypse!"
+# 2^157 -> 182687704666362864775460604089535377456991567872
+# 666 at 10th position (index 9)
+
+# def apocalyptic(n):
+#     has_three_sixes = str(pow(2,n)).find('666')
+#     return "Crisis averted. Resume sinning." if has_three_sixes == -1 else "Repent! {} days until the Apocalypse!".format(has_three_sixes)
+    
+
+# print(apocalyptic(109))
+
+# print(apocalyptic(157))
+
+# 221
+
+# Minimal V: Membership Operator
+# not_share([1, 2, 3], [4, 5, 6]), True
+# not_share([1, 2, 3], [3, 4, 5]), False
+# def not_share(lst1, lst2):
+#     # for num in lst1:
+#     #     if num in lst2:
+#     #         return False
+#     # return True
+#     return all(i not in lst2 for i in lst1)
+
+# print(not_share([1, 2, 3], [3,4, 5, 6]))
+
+#222
+# Planetary Weight Converter
+# space_weights("Earth", 1, "Mars") ➞ 0.38
+
+# space_weights("Earth", 1, "Jupiter") ➞ 2.53
+
+# space_weights("Earth", 1, "Neptune") ➞ 1.14
+
+# def space_weights(planet_a, weight, planet_b):
+#     planets = {
+#        'Mercury': 3.7,
+#         'Venus'	: 8.87,
+#         'Earth': 9.81,
+#         'Mars':	3.711,
+#         'Jupiter':24.79,
+#         'Saturn':10.44,
+#         'Uranus':8.69,
+#         'Neptune':11.15, 
+#     }
+
+#     return round(weight / planets[planet_a] * planets[planet_b],2)
+
+# print(space_weights("Earth", 1, "Mars"))
+
+# print(space_weights("Earth", 1, "Neptune"))
