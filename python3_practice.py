@@ -2997,3 +2997,64 @@
 # print(space_weights("Earth", 1, "Mars"))
 
 # print(space_weights("Earth", 1, "Neptune"))
+
+# 223
+# Club Entry
+# club_entry("apple") ➞ 64
+# Every given word will have a doubled letter, like "dd" in addiction. To answer the right number you need to find the doubled letter's position in the alphabets and multiply this number with 4.
+# def club_entry(word):
+#     for i in range(len(list(word))):
+#         if i == len(word) - 1:
+#             continue
+#         elif word[i] == word[i + 1]:
+#             return (ord(word[i]) - 96) * 4
+
+# def club_entry(word):
+#     	seen = set()
+# 	for letter in word:
+# 		if letter in seen:
+# 			return 4 * (ord(letter) - 96)
+# 		seen.add(letter)
+    
+    
+
+
+# print(club_entry("apple"))
+# print(club_entry("lettuce"))
+
+#224
+
+# Intro to Nested Loops
+# def print_all_groups():
+#     kids = []
+#     for num in range(1,7):
+#         for char in ['a','b','c','d','e']:
+#             kids.append(''.join([str(num),str(char)]))
+#     return ', '.join(kids)
+#     return ', '.join(i+j for i in '123456' for j in 'abcde')
+
+# print(print_all_groups())
+
+#225
+# Transforming Words into Binary Strings
+# Write a function that transforms all letters from [a, m] to 0 and letters from [n, z] to 1 in a string.
+
+# convert_binary("house") ➞ "01110"
+
+# convert_binary("excLAIM") ➞ "0100000"
+
+# convert_binary("moon") ➞ "0111"
+# def convert_binary(string):
+#     binary_string = ''
+#     for char in string.lower():
+#         binary_string += '0' if  ord(char) > 96 and ord(char) < 110 else '1'   
+#     return binary_string
+#     # if ord(char) > 96 and ord(char) < 110:
+#     #     binary_string += '0'
+#     # else:
+#     #     binary_string += '1'
+
+
+# print(convert_binary('excLAIM'))
+# print(convert_binary('moon'))
+# print(ord('a'),ord('b'),ord('m'))
