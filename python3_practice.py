@@ -3058,3 +3058,61 @@
 # print(convert_binary('excLAIM'))
 # print(convert_binary('moon'))
 # print(ord('a'),ord('b'),ord('m'))
+
+#226
+
+
+# format_date("11/12/2019") ➞ "20191211"
+
+# format_date("12/31/2019") ➞ "20193112"
+
+# format_date("01/15/2019") ➞ "20191501"
+
+
+# def format_date(date):
+#     destructure the array
+#     m,d,y = date.split('/')
+#     return y + m + d
+
+
+# print(format_date("11/12/2019"))
+
+#227
+# Filtering out Empty Arrays
+# def remove_empty_arrays(arr):
+#     return [x for x in arr if x != []]
+#     # return [val for val in arr if val or val == 0 or val == '']
+
+
+
+# print(remove_empty_arrays(['a', 'b', [],[], '']))
+# print(remove_empty_arrays([1, 2, [], 4, 0]))
+
+#228
+# Recursion: Reverse a String
+# reverse("hello") ➞ "olleh"
+
+# reverse("world") ➞ "dlrow"
+
+# reverse("a") ➞ "a"
+
+# reverse("") ➞ ""
+
+# def reverse(txt):
+#     # if txt == "":
+#     #     return txt
+#     # else:
+#     #     return reverse(txt[1:]) + txt[0]
+#     #Ternary Operator
+#     return txt if txt == "" else reverse(txt[1:]) + txt[0]
+
+# print(reverse("racecar"))
+
+#229
+# Invert Colors
+# Create a function that inverts the rgb values of a given tuple.
+# color_invert((165, 170, 221)) ➞ (90, 85, 34)
+
+# def color_invert(rgb):
+#     return tuple(abs(num - 255) for num in rgb)
+# print(color_invert((165, 170, 221)))
